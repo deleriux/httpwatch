@@ -30,3 +30,5 @@ It uses timerfds, epoll and curl_multi to handle the scaled load. Also uses a si
 For the clients needs this was fine, but to scale this above thousands to tens of thousands of page impressions per minute the software would need to be written to use multiple threads (one per core) and the event management mechanism to post to a work queue instead.
 
 I implemented such a scheme in a closed source program.
+
+Horizontal scaling to millions would require the use of a system to distribute work to 'nodes agents' and wait on their responses instead. I haven't needed to do this though!  
