@@ -21,8 +21,7 @@ This uses libcurl and libcap-ng (capng is used to drop privs before executing a 
 
 # Implementation
 
-The program is pretty thin on external requirements, its not designed to run as root. We ran it in a non-root container for the client to limit exposur
-e.
+The program is pretty thin on external requirements, its not designed to run as root. We ran it in a non-root container for the client to limit exposure.
 
 It uses timerfds, epoll and curl_multi to handle the scaled load. Also uses a signalfd since if you're gonna go epoll, do it properly.
 
